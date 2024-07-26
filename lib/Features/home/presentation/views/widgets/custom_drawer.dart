@@ -1,5 +1,6 @@
 import 'package:dashboard/Core/utils/assets.dart';
 import 'package:dashboard/Features/home/data/models/drawer_item_model.dart';
+import 'package:dashboard/Features/home/data/models/user_info_model.dart';
 import 'package:dashboard/Features/home/presentation/views/widgets/active_inactive_items.dart';
 import 'package:dashboard/Features/home/presentation/views/widgets/drawer_list_view.dart';
 import 'package:dashboard/Features/home/presentation/views/widgets/user_info_list_tile.dart';
@@ -22,9 +23,10 @@ class _CustomDrawerState extends State<CustomDrawer> {
         slivers: <Widget>[
           const SliverToBoxAdapter(
             child: UserInfoListTile(
-              title: "Khaled H. Anter",
-              subTitle: "khaldntr11@g.com",
-              image: Assets.imagesAvatar3,
+              item: UserInfoModel(
+                  image: Assets.imagesAvatar3,
+                  title: "Khaled H. Anter",
+                  subTitle: "khaldntr11@gmail.com"),
             ),
           ),
           const SliverToBoxAdapter(child: Gap(8)),

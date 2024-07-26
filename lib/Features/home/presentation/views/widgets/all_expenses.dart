@@ -2,6 +2,7 @@ import 'package:dashboard/Core/utils/assets.dart';
 import 'package:dashboard/Features/home/data/models/all_expenses_item_model.dart';
 import 'package:dashboard/Features/home/presentation/views/widgets/all_expenses_header.dart';
 import 'package:dashboard/Features/home/presentation/views/widgets/all_expenses_item.dart';
+import 'package:dashboard/Features/home/presentation/views/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -37,13 +38,7 @@ class _AllExpensesState extends State<AllExpenses> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(12)),
-        shape: BoxShape.rectangle,
-      ),
+    return CustomContainer(
       child: Column(
         children: <Widget>[
           const AllExpensesHeader(),
