@@ -18,8 +18,8 @@ class Assets {
   static const String imagesBalance = "assets/images/balance.svg";
 
   /// Assets for imagesCardBackground
-  /// assets/images/cardBackground.svg
-  static const String imagesCardBackground = "assets/images/cardBackground.svg";
+  /// assets/images/cardBackground.png
+  static const String imagesCardBackground = "assets/images/cardBackground.png";
 
   /// Assets for imagesDashboard
   /// assets/images/dashboard.svg

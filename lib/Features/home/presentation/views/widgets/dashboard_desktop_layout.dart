@@ -1,6 +1,8 @@
-import 'package:dashboard/Features/home/presentation/views/widgets/All_Expenses.dart';
+import 'package:dashboard/Features/home/presentation/views/widgets/all_expenses_and_quick_invoice_section.dart';
+import 'package:dashboard/Features/home/presentation/views/widgets/custom_container.dart';
 import 'package:dashboard/Features/home/presentation/views/widgets/custom_drawer.dart';
-import 'package:dashboard/Features/home/presentation/views/widgets/quick_invoice.dart';
+import 'package:dashboard/Features/home/presentation/views/widgets/income_section.dart';
+import 'package:dashboard/Features/home/presentation/views/widgets/my_card_and_trans_section.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -12,18 +14,34 @@ class DashboardDesktopLayout extends StatelessWidget {
     return const Row(
       children: [
         Expanded(
+          flex: 20,
           child: CustomDrawer(),
         ),
         // Gap(32),
         Expanded(
-          flex: 2,
+          flex: 52,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+            child: AllExpensesQuickInvoiceSection(),
+          ),
+        ),
+        Expanded(
+          flex: 28,
+          child: Padding(
+            padding: EdgeInsets.only(top: 32),
             child: Column(
-              children: <Widget>[
-                AllExpenses(),
+              children: [
+                // Expanded(child: IncomeSection()),
+                CustomContainer(
+                  child: MyCardAndTransactionSection(),
+                ),
                 Gap(24),
-                QuickInvoice(),
+                Expanded(
+                  flex: 2,
+                  child: CustomContainer(
+                    child: IncomeSection(),
+                  ),
+                ),
               ],
             ),
           ),
