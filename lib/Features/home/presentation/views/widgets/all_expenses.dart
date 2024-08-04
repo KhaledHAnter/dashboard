@@ -54,14 +54,9 @@ class _AllExpensesState extends State<AllExpenses> {
                       selectedIndex = index;
                     });
                   },
-                  child: Padding(
-                    padding: index == 1
-                        ? const EdgeInsets.symmetric(horizontal: 6)
-                        : EdgeInsets.zero,
-                    child: AllExpensesItem(
-                      item: items[index],
-                      isActive: selectedIndex == index,
-                    ),
+                  child: AllExpensesItem(
+                    item: items[index],
+                    isActive: selectedIndex == index,
                   ),
                 ),
               ),

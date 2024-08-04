@@ -38,7 +38,7 @@ class CardInfo extends StatelessWidget {
             textAlign: TextAlign.end,
           ),
         ),
-        const Gap(12),
+        const MaxGap(12),
         Text(
           "12/20  -  124",
           style: Styles.styleMedium16.copyWith(color: Colors.white),

@@ -30,19 +30,31 @@ class InActiveAllExpensesItem extends StatelessWidget {
             image: item.image,
           ),
           const Gap(34),
-          Text(
-            item.title,
-            style: Styles.styleSemiBold16,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              item.title,
+              style: Styles.styleSemiBold16,
+            ),
           ),
           const Gap(8),
-          Text(
-            item.date,
-            style: Styles.styleRegular14,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              item.date,
+              style: Styles.styleRegular14,
+            ),
           ),
           const Gap(16),
-          Text(
-            item.price,
-            style: Styles.styleSemiBold24,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              item.price,
+              style: Styles.styleSemiBold24,
+            ),
           ),
         ],
       ),
@@ -75,20 +87,32 @@ class ActiveAllExpensesItem extends StatelessWidget {
             isActive: isActive,
           ),
           const Gap(34),
-          Text(
-            item.title,
-            style: Styles.styleSemiBold16.copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              item.title,
+              style: Styles.styleSemiBold16.copyWith(color: Colors.white),
+            ),
           ),
           const Gap(8),
-          Text(
-            item.date,
-            style:
-                Styles.styleRegular14.copyWith(color: const Color(0XFFFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              item.date,
+              style: Styles.styleRegular14
+                  .copyWith(color: const Color(0XFFFAFAFA)),
+            ),
           ),
           const Gap(16),
-          Text(
-            item.price,
-            style: Styles.styleSemiBold24.copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              item.price,
+              style: Styles.styleSemiBold24.copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),

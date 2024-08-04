@@ -19,9 +19,13 @@ class ItemDetails extends StatelessWidget {
         decoration:
             BoxDecoration(shape: BoxShape.circle, color: itemDetails.color),
       ),
-      title: Text(
-        itemDetails.title,
-        style: Styles.styleRegular16,
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          itemDetails.title,
+          style: Styles.styleRegular16,
+        ),
       ),
       trailing: Text(itemDetails.percentage, style: Styles.styleMedium16),
     );
