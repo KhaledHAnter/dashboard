@@ -19,33 +19,47 @@ class DashboardDesktopLayout extends StatelessWidget {
         ),
         // Gap(32),
         Expanded(
-          flex: 52,
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-            child: AllExpensesQuickInvoiceSection(),
-          ),
-        ),
-        Expanded(
-          flex: 28,
-          child: Padding(
-            padding: EdgeInsets.only(top: 32),
-            child: Column(
-              children: [
-                // Expanded(child: IncomeSection()),
-                CustomContainer(
-                  child: MyCardAndTransactionSection(),
-                ),
-                Gap(24),
-                Expanded(
-                  flex: 2,
-                  child: CustomContainer(
-                    child: IncomeSection(),
+            flex: 80,
+            child: CustomScrollView(
+              slivers: [
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 52,
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 32),
+                          child: AllExpensesQuickInvoiceSection(),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 28,
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 32),
+                          child: Column(
+                            children: [
+                              // Expanded(child: IncomeSection()),
+                              CustomContainer(
+                                child: MyCardAndTransactionSection(),
+                              ),
+                              Gap(24),
+                              Expanded(
+                                flex: 2,
+                                child: CustomContainer(
+                                  child: IncomeSection(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
+                )
               ],
-            ),
-          ),
-        ),
+            ))
       ],
     );
   }

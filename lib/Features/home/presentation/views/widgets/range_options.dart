@@ -18,14 +18,14 @@ class RangeOptions extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: const Row(
+      child: Row(
         children: <Widget>[
           Text(
             "Monthly",
             style: Styles.styleMedium16,
           ),
-          Gap(14),
-          Icon(
+          const Gap(14),
+          const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xff064061),
           ),

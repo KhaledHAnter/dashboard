@@ -8,7 +8,7 @@ class TransactionHistoryHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        const Text(
+        Text(
           "Transaction History",
           style: Styles.styleSemiBold20,
         ),

@@ -12,7 +12,9 @@ class MyCard extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 420 / 215,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 24,
+          ),
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
